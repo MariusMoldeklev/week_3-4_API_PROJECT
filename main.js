@@ -1,11 +1,11 @@
 
-const endpoint = `Programming,Miscellaneous,Pun,Spooky,Christmas?blacklistFlags=nsfw,religious,political,racist,sexist`
+const endpoint = `Any?blacklistFlags=nsfw,religious,political,racist,sexist`
 const url = `https://v2.jokeapi.dev/joke/${endpoint}`
 
 const fetchJoke = async () => {
     const response = await fetch(url)
     const data = await response.json()
-    console.log(data)
+    console.log(data.category)
     
 }
 
@@ -37,6 +37,7 @@ function getCategories() {
   fetch("https://v2.jokeapi.dev/categories")
     .then(response => response.json())
     .then(data => {
+        console.log(data)
       jokeDisplay.innerHTML = "<p><strong>Categories:</strong></p>";
       data.forEach(category => {
             const categoryBtn = document.createElement("button");
@@ -50,32 +51,32 @@ function getCategories() {
             });
         }
         
-        // function getJokeByCategory(category) {
-            //   fetch(`https://v2.jokeapi.dev/joke/${category}?type=twopart`)
-//     .then(response => response.json())
-//     .then(data => {
-//       jokeDisplay.innerHTML = `<p><strong>${data.setup}</strong></p>
-//                                 <p>${data.delivery}</p>`;
-//     })
-//     .catch(error => {
-    //       jokeDisplay.innerHTML = "<p>Failed to fetch joke. Please try again.</p>";
-    //     });
-    // }
+        function getJokeByCategory(category) {
+              fetch(`https://v2.jokeapi.dev/joke/${category}?type=twopart`)
+    .then(response => response.json())
+    .then(data => {
+      jokeDisplay.innerHTML = `<p><strong>${data.setup}</strong></p>
+                                <p>${data.delivery}</p>`;
+    })
+    .catch(error => {
+          jokeDisplay.innerHTML = "<p>Failed to fetch joke. Please try again.</p>";
+        });
+    }
     
-    // function generateJoke() {
-        //   fetch("https://v2.jokeapi.dev/joke/Any?type=twopart")
-//     .then(response => response.json())
-//     .then(data => {
-//       jokeDisplay.innerHTML = `<p><strong>${data.setup}</strong></p>
-//                                 <p>${data.delivery}</p>`;
-//     })
-//     .catch(error => {
-    //       jokeDisplay.innerHTML = "<p>Failed to generate joke. Please try again.</p>";
-    //     });
-    // }
+    function generateJoke() {
+          fetch("https://v2.jokeapi.dev/joke/Any?type=twopart")
+    .then(response => response.json())
+    .then(data => {
+      jokeDisplay.innerHTML = `<p><strong>${data.setup}</strong></p>
+                                <p>${data.delivery}</p>`;
+    })
+    .catch(error => {
+          jokeDisplay.innerHTML = "<p>Failed to generate joke. Please try again.</p>";
+        });
+    }
     
-    // // Initially, load a random joke when the page loads
-    // getRandomJoke();
+    // Initially, load a random joke when the page loads
+    getRandomJoke();
 
 
 
