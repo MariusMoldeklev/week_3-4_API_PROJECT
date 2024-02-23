@@ -21,17 +21,17 @@ randomBtn.addEventListener("click", getRandomJoke);
 categoryBtn.addEventListener("click", getCategories);
 generateBtn.addEventListener("click", generateJoke);
 
-// function getRandomJoke() {
-//   fetch("https://v2.jokeapi.dev/joke/Any?type=twopart")
-//     .then(response => response.json())
-//     .then(data => {
-    //       jokeDisplay.innerHTML = `<p><strong>${data.setup}</strong></p>
-    //                                 <p>${data.delivery}</p>`;
-    //     })
-    //     .catch(error => {
-        //       jokeDisplay.innerHTML = "<p>Failed to fetch joke. Please try again.</p>";
-//     });
-// }
+function getRandomJoke() {
+  fetch("https://v2.jokeapi.dev/joke/Any?type=twopart")
+    .then(response => response.json())
+    .then(data => {
+          jokeDisplay.innerHTML = `<p><strong>${data.setup}</strong></p>
+                                    <p>${data.delivery}</p>`;
+        })
+        .catch(error => {
+              jokeDisplay.innerHTML = "<p>Failed to fetch joke. Please try again.</p>";
+    });
+}
 
 // function getCategories() {
 //   fetch("https://v2.jokeapi.dev/categories")
