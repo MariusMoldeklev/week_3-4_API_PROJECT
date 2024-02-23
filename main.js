@@ -40,7 +40,7 @@ function getCategories() {
         console.log(data)
         jokeDisplay.innerHTML = "<p><strong>Categories:</strong></p>";
         // this code does not want tu run cant find out why
-        data.forEach(category => {
+        data.categories.forEach(category => {
             const categoryBtn = document.createElement("button");
             categoryBtn.textContent = category;
             categoryBtn.addEventListener("click", () => getJokeByCategory(category));
