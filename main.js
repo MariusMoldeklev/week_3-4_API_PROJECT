@@ -38,8 +38,9 @@ function getCategories() {
     .then(response => response.json())
     .then(data => {
         console.log(data)
-      jokeDisplay.innerHTML = "<p><strong>Categories:</strong></p>";
-      data.forEach(category => {
+        jokeDisplay.innerHTML = "<p><strong>Categories:</strong></p>";
+        // this code does not want tu run cant find out why
+        data.forEach(category => {
             const categoryBtn = document.createElement("button");
             categoryBtn.textContent = category;
             categoryBtn.addEventListener("click", () => getJokeByCategory(category));
