@@ -39,6 +39,7 @@ function getCategories() {
     .then(data => {
         console.log(data)
         jokeDisplay.innerHTML = "<p><strong>Categories:</strong></p>";
+        // kan bruke .map istede for .forEach
         data.categories.forEach(category => {
             const categoryBtn = document.createElement("button");
             categoryBtn.textContent = category;
