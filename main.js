@@ -39,7 +39,6 @@ function getCategories() {
     .then(data => {
         console.log(data)
         jokeDisplay.innerHTML = "<p><strong>Categories:</strong></p>";
-        // this code does not want tu run cant find out why
         data.categories.forEach(category => {
             const categoryBtn = document.createElement("button");
             categoryBtn.textContent = category;
