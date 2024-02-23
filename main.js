@@ -33,22 +33,22 @@ function getRandomJoke() {
     });
 }
 
-// function getCategories() {
-//   fetch("https://v2.jokeapi.dev/categories")
-//     .then(response => response.json())
-//     .then(data => {
-//       jokeDisplay.innerHTML = "<p><strong>Categories:</strong></p>";
-//       data.forEach(category => {
-    //         const categoryBtn = document.createElement("button");
-    //         categoryBtn.textContent = category;
-    //         categoryBtn.addEventListener("click", () => getJokeByCategory(category));
-    //         jokeDisplay.appendChild(categoryBtn);
-    //       });
-    //     })
-    //     .catch(error => {
-        //       jokeDisplay.innerHTML = "<p>Failed to fetch categories. Please try again.</p>";
-        //     });
-        // }
+function getCategories() {
+  fetch("https://v2.jokeapi.dev/categories")
+    .then(response => response.json())
+    .then(data => {
+      jokeDisplay.innerHTML = "<p><strong>Categories:</strong></p>";
+      data.forEach(category => {
+            const categoryBtn = document.createElement("button");
+            categoryBtn.textContent = category;
+            categoryBtn.addEventListener("click", () => getJokeByCategory(category));
+            jokeDisplay.appendChild(categoryBtn);
+          });
+        })
+        .catch(error => {
+              jokeDisplay.innerHTML = "<p>Failed to fetch categories. Please try again.</p>";
+            });
+        }
         
         // function getJokeByCategory(category) {
             //   fetch(`https://v2.jokeapi.dev/joke/${category}?type=twopart`)
