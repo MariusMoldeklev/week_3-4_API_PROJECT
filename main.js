@@ -129,19 +129,4 @@ function getCategories() {
     // console.log(fetchJokes)
     
     
-    
-    
-    // const apiFetch = async ()=>{
-    //     const response = await fetch(apiUrl)
-    //     const data = await response.json()
-    //     console.log(data)
-        // console.log(data.data)
-        // const jokeHTML = data.data.map(jokes) => `
-        // <div class ="">
-        //     <div> class="joke-text">
-        //     <h2>
-        //     `
-    
-    // }
-    
-    // apiFetch()
+  
