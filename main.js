@@ -85,31 +85,6 @@ function getCategories() {
 
 
 
-
-    // const API_key = "3e6fc0d6a2844fb8bce282198b367e1f";
-    // const apiKey = '86dcfe9aa32f49658a242a93037ef96e';
-    // const apiUrl = 'https://api.humorapi.com/jokes/search';
-    
-    // function fetchJokes() {
-    //   const keywords = 'horse,man'; // Example keywords
-    //   const number = 3; // Number of jokes to fetch
-    
-    //   const url = `${apiUrl}?keywords=${keywords}&number=${number}&api-key=${apiKey}`;
-    
-    //   fetch(url)
-    //     .then(response => {
-    //       if (!response.ok) {
-    //         throw new Error('Network response was not ok');
-    //       }
-    //       return response.json();
-    //     })
-    //     .then(data => {
-    //       displayJokes(data.jokes);
-    //     })
-    //     .catch(error => {
-    //       console.error('There was a problem fetching the jokes:', error);
-    //     });
-    // }
     
     // function displayJokes(jokes) {
     //   const jokesContainer = document.getElementById('jokes-container');
