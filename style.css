@@ -10,3 +10,12 @@
 .color {
     color: white;
 }
+
+.displayText {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.displayTextTwo {
+    font-size: 1.3rem;
+}
