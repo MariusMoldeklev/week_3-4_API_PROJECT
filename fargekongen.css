@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+    padding: 0;
 }
 
 .content-wrapper {
@@ -67,7 +68,6 @@ body {
 
 footer {
     text-align: center;
-    padding: 10px;
     background-color: #1635D9;
     color: rgb(255, 255, 255);
     width: 100%;
