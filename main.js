@@ -38,7 +38,7 @@ function getCategories() {
     .then(response => response.json())
     .then(data => {
         console.log(data)
-        jokeDisplay.innerHTML = "<p><strong>Categories:</strong></p>";
+        jokeDisplay.innerHTML = `<p class="displayText"><strong>Categories</strong></p>`
         // kan bruke .map istede for .forEach
         data.categories.forEach(category => {
             const categoryBtn = document.createElement("button");
