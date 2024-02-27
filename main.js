@@ -65,17 +65,17 @@ function getCategories() {
         });
     }
     
-    function generateJoke() {
-          fetch("https://v2.jokeapi.dev/joke/Any?type=twopart")
-    .then(response => response.json())
-    .then(data => {
-      jokeDisplay.innerHTML = `<p><strong>${data.setup}</strong></p>
-                                <p>${data.delivery}</p>`;
-    })
-    .catch(error => {
-          jokeDisplay.innerHTML = "<p>Failed to generate joke. Please try again.</p>";
-        });
-    }
+    // function generateJoke() {
+    //       fetch("https://v2.jokeapi.dev/joke/Any?type=twopart")
+    // .then(response => response.json())
+    // .then(data => {
+    //   jokeDisplay.innerHTML = `<p><strong>${data.setup}</strong></p>
+    //                             <p>${data.delivery}</p>`;
+    // })
+    // .catch(error => {
+    //       jokeDisplay.innerHTML = "<p>Failed to generate joke. Please try again.</p>";
+    //     });
+    // }
     
     // Initially, load a random joke when the page loads
     getRandomJoke();
