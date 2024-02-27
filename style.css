@@ -19,3 +19,17 @@
 .displayTextTwo {
     font-size: 1.3rem;
 }
+
+.categorybuttons{
+    margin-left: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+.categorybuttons:hover {
+    font-weight:700;
+    color: red;
+}
