@@ -21,15 +21,15 @@
 }
 
 .categorybuttons{
-    margin-left: 5px;
+    margin: 0px 5px;
     font-size: 16px;
     cursor: pointer;
     background-color: #333;
     color: white;
     border: none;
+    padding: 4px 16px;
 }
 
 .categorybuttons:hover {
-    font-weight:700;
     color: red;
 }
