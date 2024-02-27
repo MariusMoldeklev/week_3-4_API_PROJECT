@@ -25,8 +25,8 @@ function getRandomJoke() {
   fetch("https://v2.jokeapi.dev/joke/Any?type=twopart")
     .then(response => response.json())
     .then(data => {
-          jokeDisplay.innerHTML = `<p><strong>${data.setup}</strong></p>
-                                    <p>${data.delivery}</p>`;
+          jokeDisplay.innerHTML = `<p class="displayText"><strong>${data.setup}</strong></p>
+                                    <p class="displayTextTwo>${data.delivery}</p>`;
         })
         .catch(error => {
               jokeDisplay.innerHTML = "<p>Failed to fetch joke. Please try again.</p>";
@@ -42,6 +42,7 @@ function getCategories() {
         // kan bruke .map istede for .forEach
         data.categories.forEach(category => {
             const categoryBtn = document.createElement("button");
+            categoryBtn.classList.add("categorybuttons")
             categoryBtn.textContent = category;
             categoryBtn.addEventListener("click", () => getJokeByCategory(category));
             jokeDisplay.appendChild(categoryBtn);
@@ -56,8 +57,8 @@ function getCategories() {
               fetch(`https://v2.jokeapi.dev/joke/${category}?type=twopart`)
     .then(response => response.json())
     .then(data => {
-      jokeDisplay.innerHTML = `<p><strong>${data.setup}</strong></p>
-                                <p>${data.delivery}</p>`;
+      jokeDisplay.innerHTML = `<p class="displayText"><strong>${data.setup}</strong></p>
+                                <p class="displayTextTwo">${data.delivery}</p>`;
     })
     .catch(error => {
           jokeDisplay.innerHTML = "<p>Failed to fetch joke. Please try again.</p>";
