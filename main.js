@@ -26,7 +26,7 @@ function getRandomJoke() {
     .then(response => response.json())
     .then(data => {
           jokeDisplay.innerHTML = `<p class="displayText"><strong>${data.setup}</strong></p>
-                                    <p class="displayTextTwo>${data.delivery}</p>`;
+                                    <p class="displayTextTwo">${data.delivery}</p>`;
         })
         .catch(error => {
               jokeDisplay.innerHTML = "<p>Failed to fetch joke. Please try again.</p>";
