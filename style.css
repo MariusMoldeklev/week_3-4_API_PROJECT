@@ -33,3 +33,10 @@
 .categorybuttons:hover {
     color: red;
 }
+
+.heroText {
+    padding: 40px ;
+    background-color: white;
+    border-radius: 25%;
+    text-align: center;
+}
