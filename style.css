@@ -88,4 +88,7 @@
     .textPhone {
         display: block;
     }
+    .spacer {
+        display: none;
+    }
   }
