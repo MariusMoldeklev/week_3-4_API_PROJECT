@@ -132,7 +132,7 @@ footer {
     margin: 0;
 }
 
-@media (min-width: 320px) and (max-width: 600px) {
+@media (min-width: 220px) and (max-width: 600px) {
     .content-wrapper {
         width: 100%;
     }

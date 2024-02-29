@@ -73,11 +73,15 @@
     left: 500px;
     bottom: -24px;
   }
+  
+  h2{
+    text-align: center;
+  }
 
   .textPhone{
     display: none;
   }
-  @media (min-width: 320px) and (max-width: 600px) {
+  @media (min-width: 120px) and (max-width: 1400px) {
     .bubble {
         display: none;
     }
