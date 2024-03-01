@@ -191,4 +191,7 @@ footer {
     .footer-column h1 {
         font-size: 16px;
     }
+    .box {
+        padding: 0px 20px 20px 20px;
+    }
 }
