@@ -140,6 +140,10 @@ footer {
 }
 
 @media (min-width: 220px) and (max-width: 600px) {
+.main {
+    width: 100vw;
+}
+
     .content-wrapper {
         width: 100%;
     }
@@ -186,6 +190,7 @@ footer {
 
     .box {
         margin: 20px auto;
+        width: 80vw;
     }
 
     footer {
@@ -196,7 +201,7 @@ footer {
         font-size: 16px;
     }
     .box {
-        padding: 0px 20px 60px 20px;
+        padding: 0px 00px 60px 00px;
     }
 
 }
