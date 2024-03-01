@@ -133,8 +133,10 @@ footer {
 }
 
 .githubIcon {
-    max-width: 15px;
+    width: 15px;
+    height: auto;
     margin-left: 50px;
+    color: black;
 }
 
 @media (min-width: 220px) and (max-width: 600px) {
